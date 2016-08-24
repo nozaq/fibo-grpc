@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package fiborpc;
+
+service Leonardo {
+  rpc Fibo(FiboRequest) returns (FiboReply) {}
+}
+
+message FiboRequest {
+  int32 index = 1;
+}
+
+message FiboReply {
+  int32 value = 1;
+}
